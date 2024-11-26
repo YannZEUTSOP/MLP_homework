@@ -18,13 +18,13 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: yannzeutsop
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
         run: |
-          docker build -t your-dockerhub-username/your-repo-name:latest .
+          docker build -t yannzeutsop/mlp_homework:latest .
 
       - name: Push Docker image to Docker Hub
         run: |
-          docker push your-dockerhub-username/your-repo-name:latest
+          docker push yannzeutsop/mlp_homework:latest
